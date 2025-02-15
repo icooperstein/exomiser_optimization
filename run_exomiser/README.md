@@ -4,9 +4,9 @@ It is not necessary to replicate our set-up for running Exomiser/Genomiser. Exam
 
 Necessary files to run Exomiser as a slurm job:
 
-application.properties
-run_exomiser.sh
-submit_genomiser.sh
+1. application.properties
+2. run_exomiser.sh
+3. submit_exomiser.sh
 Linux bash command: sbatch submit_exomiser.sh ID run_type
 
 Replace "ID" with your sample ID and "run_type" with naming convention you have named your YML files
