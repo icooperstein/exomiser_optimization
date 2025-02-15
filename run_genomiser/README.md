@@ -6,4 +6,6 @@ Optional (to submit as slurm job):
 
 To run exomiser using our set-up:
 
-sbatch submit_genomiser.sh ID run_type ##replace ID with sample ID and run_type with naming convention you have named your YML files
+``` sbatch submit_genomiser.sh ID run_type ```
+
+##replace ID with sample ID and run_type with naming convention you have named your YML files
