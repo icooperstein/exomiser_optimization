@@ -19,7 +19,7 @@ bcftools view -O u -o sample.singleton.vcf.gz -s "SAMPLE_ID" sample.filtered.vcf
 
 ```
 
-## Running Exomiser Genomiser
+## Running Exomiser / Genomiser
 Installation instructions and instructions to run Exomiser and Genomiser can be found in their documentation: https://exomiser.readthedocs.io/en/latest/running.html
 
 It is not necessary to replicate our set-up for running Exomiser or Genomiser. Example YAML files using our recommended optimized parameters can be found in the "run_exomiser/yml_files" directory for Exomiser and "run_genomiser/yml_files" for Genomiser
