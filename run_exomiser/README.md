@@ -17,7 +17,7 @@ Replace "ID" with your sample ID and "run_type" with naming convention you have 
 
 
 ## (B) Cohort-level script preparation and execution files
-- this adaption requires '''submit_exomiser.sh'''
+- this adaption requires ```submit_exomiser.sh```
 #### create_multiple_scripts.py
 Necessary inputs: 
 1. List of sample ids for which you wish to run Exomiser on
