@@ -12,3 +12,9 @@ bcftools +fill-tags -O z sample.vcf.gz -- -t FORMAT/VAF,HWE | bcftools view -O z
 * requires a "sample.txt" file which simply has the sample_id name (as found in VCF header)
 
 
+## Subset to proband-only VCF
+
+```
+bcftools view -O u -o sample.singleton.vcf.gz -s "SAMPLE_ID" sample.filtered.vcf.gz
+
+```
