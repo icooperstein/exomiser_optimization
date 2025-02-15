@@ -12,6 +12,7 @@ Necessary files to run Exomiser as a slurm job:
 3. submit_exomiser.sh
 
 Linux bash command: ```sbatch submit_exomiser.sh ID run_type```
+
 Replace "ID" with your sample ID and "run_type" with naming convention you have named your YML files
 
 
@@ -21,7 +22,6 @@ Replace "ID" with your sample ID and "run_type" with naming convention you have 
 Necessary inputs: 
 1. List of sample ids for which you wish to run Exomiser on
 2. table of comma-separated phenotype lists for each sample id
-
 
 This script will write 3 files to designated folder for each sample id:
 1. YAML file: /exomiser/patient/path/sample_id_runtype.yml
