@@ -10,8 +10,7 @@ Necessary files to run Exomiser as a slurm job:
 1. application.properties
 2. run_exomiser.sh
 3. submit_exomiser.sh
-Linux bash command:
-sbatch submit_exomiser.sh ID run_type
+Linux bash command: sbatch submit_exomiser.sh ID run_type
 Replace "ID" with your sample ID and "run_type" with naming convention you have named your YML files
 
 
