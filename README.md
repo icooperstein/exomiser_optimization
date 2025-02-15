@@ -3,7 +3,7 @@ Example run files and scripts used in the analyses of "An optimized variant prio
 
 
 
-##### Filtering VCFs
+## Filtering VCFs
 ```
 bcftools +fill-tags -O z sample.vcf.gz -- -t FORMAT/VAF,HWE | bcftools view -O z -o sample.filtered.vcf.gz -e 'FORMAT/GQ[@sample.txt] < 20 || ( GT[@sample.txt]="het" && ( FORMAT/VAF[@sample.txt] < 0.15 || FORMAT/VAF[@sample.txt] > 0.85  ) )' ```
 
