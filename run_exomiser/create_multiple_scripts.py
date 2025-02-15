@@ -105,10 +105,8 @@ for sample_id in id_list:
         print('        REGULATORY_REGION_VARIANT', file = yaml)
         print('      ]', file = yaml)
         print('    },', file = yaml)
-        if 'freq1' in RUN_TYPE:
-            print('    frequencyFilter: {maxFrequency: 1.0},', file = yaml)
-        else:
-            print('    frequencyFilter: {maxFrequency: 2.0},', file = yaml)
+        print('    frequencyFilter: {maxFrequency: 1.0},', file = yaml)
+       
         print('    pathogenicityFilter: {keepNonPathogenic: true},', file = yaml)
         print('    inheritanceFilter: {},', file = yaml)
         print('    omimPrioritiser: {},', file = yaml)
