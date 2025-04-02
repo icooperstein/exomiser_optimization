@@ -1,0 +1,64 @@
+analysis:
+  genomeAssembly: hg38
+   vcf: ## /path/to/vcf 
+  ped: ## /path/to/pedigree/file
+  proband: ## proband ID (to match proband sample ID in pedigree file)
+  hpoIds: ['Term1', 'Term2'] ## list of HPO IDs (ex HP:0000118)
+  
+  inheritanceModes: {
+    AUTOSOMAL_DOMINANT: 0.1,
+    AUTOSOMAL_RECESSIVE_HOM_ALT: 0.1,
+    AUTOSOMAL_RECESSIVE_COMP_HET: 2.0,
+    X_DOMINANT: 0.1,
+    X_RECESSIVE_HOM_ALT: 0.1,
+    X_RECESSIVE_COMP_HET: 2.0,
+    MITOCHONDRIAL: 0.2
+  }
+
+  analysisMode: PASS_ONLY
+
+  frequencySources: [
+    THOUSAND_GENOMES,
+    TOPMED,
+    UK10K,
+    ESP_AFRICAN_AMERICAN, ESP_EUROPEAN_AMERICAN, ESP_ALL,
+    EXAC_AFRICAN_INC_AFRICAN_AMERICAN, EXAC_AMERICAN,
+    EXAC_SOUTH_ASIAN, EXAC_EAST_ASIAN,
+    EXAC_NON_FINNISH_EUROPEAN,
+    GNOMAD_E_AFR,
+    GNOMAD_E_AMR,
+    GNOMAD_E_EAS,
+    GNOMAD_E_NFE,
+    GNOMAD_E_SAS,
+    GNOMAD_G_AFR,
+    GNOMAD_G_AMR,
+    GNOMAD_G_EAS,
+    GNOMAD_G_NFE,
+    GNOMAD_G_SAS
+  ]
+
+  pathogenicitySources: [
+    REMM,
+    REVEL,
+    MVP,
+    ALPHA_MISSENSE,
+    SPLICE_AI
+  ]
+
+  steps: [
+    hiPhivePrioritiser: {runParams: "human"},
+    priorityScoreFilter: { priorityType: HIPHIVE_PRIORITY, minPriorityScore: 0.501 },
+    failedVariantFilter: { },
+    regulatoryFeatureFilter: { },
+    frequencyFilter: {maxFrequency: 2.0},
+    pathogenicityFilter: {keepNonPathogenic: true},
+    inheritanceFilter: {},
+    omimPrioritiser: {},
+  ]
+
+outputOptions:
+  outputContributingVariantsOnly: false
+  numGenes: 0
+  outputDirectory:  ## path/to/output/directory
+  outputFileName:  ## output_file_name
+  outputFormats: [TSV_GENE, TSV_VARIANT, VCF]
