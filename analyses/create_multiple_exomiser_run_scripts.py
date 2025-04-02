@@ -1,19 +1,38 @@
+######################
+##Create cohort-level script preparation and execution files
+######################
+#Necessary inputs:
+    # List of sample ids for which you wish to run Exomiser on (id_list)
+    # table of comma-separated phenotype lists for each sample id (phenotype_data)
+    # This script will write 3 files to designated folder for each sample id:
+        # YAML file: /exomiser/patient/path/sample_id_runtype.yml
+        # /exomiser/patient/path/sample_id.runtype.exomiser.sh (equivalent to run_exomiser.sh)
+        # /working/directory/runtype_submission_commands.sh ## one line per sample_id slurm job submission
+#you will also need to adjust the following paths/variables to your liking:
+    # path (working directory; where you want run time files and results stored; also where the "application.properties" file must be stored
+    # vcfs_path (directory with VCF files stored)
+    # peds_path (directory with ped files stored)
+    # RUN_TYPE (recommended: human_revel_mvp_AM_spliceAI)
+
+
+                                             
+
 import pandas as pd
 import os 
 
-path = '/path/to/working/directory/'
+path = '/path/to/working/directory/' 
 phenotype_data = pd.read_csv('')
 
-vcfs_path = "/scratch/ucgd/lustre/UCGD_Staging/UDN_Data/phase3/no_phenotype/"
-peds_path = '/scratch/ucgd/lustre-labs/marth/scratch/u6013141/UDN_2024/Exomiser/updated_peds/'
+vcfs_path = "path/to/vcf/directory/"
+peds_path = 'path/to/peds/directory/'
 
-RUN_TYPE = ''
+RUN_TYPE = '' ##name your run type
 id_list = [] # list of sample ids to make scripts for
 
 failed =[]
 for sample_id in id_list:
     phenotype_list1 = phenotype_data[phenotype_data['ID']==sample_id]['Terms'].item() ##replace column names to match your file with phenotype lists; comma-separated list of temrs
-    #create a directory for the exomiser files for this UDN ID
+    #create a directory for the exomiser files for this patient ID
     exomiser_patient_path = path + str(sample_id) + '/'
     ##also create a directory for results 
     exomiser_patient_results_path = path +  str(sample_id) + '/' + 'results/'
@@ -34,7 +53,7 @@ for sample_id in id_list:
             failed.append(sample_id)
 
     else:
-        ##Create yml file
+        ##Create yml file NOTE: you will have to manually change print commands in this section to fit the run-type you prefer. the current file will create a YAML file with our optimized parameters (human-only hiPHIVE; REVEL, MVP, AlphaMissense,SpliceAI variant path sources)
         yaml = open(str(exomiser_patient_path) + str(sample_id)  +'_'+str(RUN_TYPE)+'.yml', 'w')
         print('analysis:', file = yaml)
         print('  genomeAssembly: hg38', file = yaml)
@@ -110,11 +129,9 @@ for sample_id in id_list:
         print('    pathogenicityFilter: {keepNonPathogenic: true},', file = yaml)
         print('    inheritanceFilter: {},', file = yaml)
         print('    omimPrioritiser: {},', file = yaml)
-        if 'human' in RUN_TYPE:
-            print('    hiPhivePrioritiser: {runParams: "human"},', file = yaml)
-        else:
-            print('    hiPhivePrioritiser: {},', file = yaml)
-       # print('    hiPhivePrioritiser: {runParams: "mouse"},', file = yaml)
+        print('    hiPhivePrioritiser: {runParams: "human"},', file = yaml)
+        #print('    hiPhivePrioritiser: {},', file = yaml) ## all models (human, mouse, zebrafish, PPI)
+        #print('    hiPhivePrioritiser: {runParams: "mouse"},', file = yaml)
         #print('    phenixPrioritiser: {},', file = yaml)
         
         print('  ]', file = yaml)
