@@ -28,14 +28,14 @@ bcftools +fill-tags -O z sample.vcf.gz -- -t FORMAT/VAF,HWE | bcftools view -O z
 ### Run Exomiser/Genomiser
 It is not necessary to replicate our set-up for running Exomiser or Genomiser. \
 [Example YAML files for Exomiser](https://github.com/icooperstein/exomiser_optimization/blob/main/run_exomiser/yml_files) \
-    - optimized_exomiser.yml
-        - Our final set of optimized parameters as described in publication
-    - default_exomiser.yml
-        - Default parameters as installed with Exomiser v14.0.0
-    - no_phenotypes_exomiser.yml
-        - Run Exomiser without and HPO phenotypes
-    - possible_parameters_exomiser.ymlhttps://github.com/icooperstein/exomiser_optimization/blob/main/run_exomiser/yml_files/possible_parameters_exomiser.yml
-        - Commented lines describe all possible options for key parameters for use exploration
+- optimized_exomiser.yml
+    - Our final set of optimized parameters as described in publication
+- default_exomiser.yml
+    - Default parameters as installed with Exomiser v14.0.0
+- no_phenotypes_exomiser.yml
+    - Run Exomiser without and HPO phenotypes
+- possible_parameters_exomiser.ymlhttps://github.com/icooperstein/exomiser_optimization/blob/main/run_exomiser/yml_files/possible_parameters_exomiser.yml
+    - Commented lines describe all possible options for key parameters for use exploration
 
 [Example YAML files for Genomiser](https://github.com/icooperstein/exomiser_optimization/blob/main/run_genomiser/yml_files)
 
