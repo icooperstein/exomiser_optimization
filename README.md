@@ -1,16 +1,13 @@
 # An optimized variant prioritization process for rare disease diagnostics: recommendations for Exomiser and Genomiser
-### Contents
+## Contents
 - [Running Exomiser/Genomiser](#running-Exomiser-and-Genomiser)
     - [Installation](#installation)
     - [Filtering VCFs](#filtering-vcfs)
     - [Run Exomiser](#run-exomiser)
     - [Run Genomiser](#run-genomiser)
 - [Figures](#figures)
-- [Create cohort-level YAML and execution files](https://github.com/icooperstein/exomiser_optimization/blob/main/manuscript/analyses/create_multiple_exomiser_run_scripts.py.py)
-
-## Figures
-* jupyter notebooks used for figure generation in manuscript as well as PDFs of final figures
-
+- [Analyses](#analyses)
+    - [Subset to proband-only VCF]
 
 ## Running Exomiser and Genomiser
 ### Installation
@@ -40,7 +37,7 @@ Necessary files to run Exomiser as a slurm job:
     - [submit_exomiser.sh](https://github.com/icooperstein/exomiser_optimization/blob/main/run_exomiser/submit_exomiser.sh)
 Linux bash command: ```sbatch submit_exomiser.sh ID run_type```
 Replace "ID" with your sample ID and "run_type" with naming convention you have named your YML files
-
+*[Create cohort-level YAML and execution files](https://github.com/icooperstein/exomiser_optimization/blob/main/manuscript/run_exomiser/create_multiple_exomiser_run_scripts.py)
 
 ### Run Genomiser
 It is not necessary to replicate our set-up for running Genomiser. \
@@ -56,7 +53,11 @@ Necessary files to run Exomiser as a slurm job:
 Linux bash command: ```sbatch submit_genomiser.sh ID run_type```
 Replace "ID" with your sample ID and "run_type" with naming convention you have named your YML files
 
-## Subset to proband-only VCF
+## Figures
+* jupyter notebooks used for figure generation in manuscript as well as PDFs of final figures
+
+## Analyses
+### Subset to proband-only VCF
 
 ```
 bcftools view -O u -o sample.singleton.vcf.gz -s "SAMPLE_ID" sample.filtered.vcf.gz

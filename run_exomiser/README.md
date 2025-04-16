@@ -2,7 +2,8 @@ Instructions to run Exomiser and Genomiser can be found in their documentation: 
 
 It is not necessary to replicate our set-up for running Exomiser/Genomiser. Example YAML files using our optimized parameters can be found in the "yml_files" directory.
 
-We provide execution scripts to run Exomiser with a single family. Python scripts to create many scripts for cohort of families can be found in the analyses folder.
+We provide execution scripts to run Exomiser with a single family.
+If you are running Exomiser on a large cohort of patients, we provide a python script to aid in simultaneously creating YAML and execution (run_exomiser.sh) files for multiple patients found [here](create_multiple_exomiser_run_scripts.py)
 
 ## Execution scripts for a single family
 Necessary files to run Exomiser as a slurm job:
@@ -24,4 +25,5 @@ Necessary files to run Exomiser as a slurm job:
 
 Linux bash command: ```sbatch submit_exomiser.sh ID run_type```
 
-Replace "ID" with your sample ID and "run_type" with naming convention you have named your YML files
+Replace "ID" with your sample ID and "run_type" with naming convention you have named your YML files /
+
