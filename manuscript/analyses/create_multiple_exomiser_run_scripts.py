@@ -1,5 +1,5 @@
 ######################
-##Create cohort-level script preparation and execution files
+##Create cohort-level YAML and execution files
 ######################
 #Necessary inputs:
     # List of sample ids for which you wish to run Exomiser on (id_list)
