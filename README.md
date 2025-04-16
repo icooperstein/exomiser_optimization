@@ -27,18 +27,34 @@ bcftools +fill-tags -O z sample.vcf.gz -- -t FORMAT/VAF,HWE | bcftools view -O z
 
 ### Run Exomiser/Genomiser
 It is not necessary to replicate our set-up for running Exomiser or Genomiser. \
-[Example YAML files for Exomiser](https://github.com/icooperstein/exomiser_optimization/blob/main/run_exomiser/yml_files) \
-- optimized_exomiser.yml
-    - Our final set of optimized parameters as described in publication
-- default_exomiser.yml
-    - Default parameters as installed with Exomiser v14.0.0
-- no_phenotypes_exomiser.yml
-    - Run Exomiser without and HPO phenotypes
-- possible_parameters_exomiser.ymlhttps://github.com/icooperstein/exomiser_optimization/blob/main/run_exomiser/yml_files/possible_parameters_exomiser.yml
-    - Commented lines describe all possible options for key parameters for use exploration
+Necessary files to run Exomiser as a slurm job: \
+1. Proband-only or multisample VCF - provided by user
+2. Pedigree (for multisample VCF) - provided by user
+3. YAML file
+    - [Example YAML files for Exomiser](https://github.com/icooperstein/exomiser_optimization/blob/main/run_exomiser/yml_files) 
+        - optimized_exomiser.yml
+            - Our final set of optimized parameters as described in publication
+        - default_exomiser.yml
+            - Default parameters as installed with Exomiser v14.0.0
+        - no_phenotypes_exomiser.yml
+            - Run Exomiser without any HPO phenotypes
+        - possible_parameters_exomiser.yml
+            - Commented lines describe all possible options for key parameters for use exploration
+4. [application.properties](https://github.com/icooperstein/exomiser_optimization/blob/main/run_exomiser/application.properties)
+5. Execution scripts
+    - [run_exomiser.sh](https://github.com/icooperstein/exomiser_optimization/blob/main/run_exomiser/run_exomiser.sh)
+    - [submit_exomiser.sh](https://github.com/icooperstein/exomiser_optimization/blob/main/run_exomiser/submit_exomiser.sh)
+Linux bash command: ```sbatch submit_exomiser.sh ID run_type```
+Replace "ID" with your sample ID and "run_type" with naming convention you have named your YML files
+
 
 [Example YAML files for Genomiser](https://github.com/icooperstein/exomiser_optimization/blob/main/run_genomiser/yml_files)
-
+- optimized_genomiser.yml
+    - Our final set of optimized parameters as described in publication
+- default_genomiser.yml
+    - Default parameters as installed with Exomiser v14.0.0
+- possible_parameters_genomiser.yml
+    - Commented lines describe all possible options for key parameters for use exploration
 
 ## Subset to proband-only VCF
 
