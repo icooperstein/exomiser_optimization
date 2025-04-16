@@ -2,6 +2,7 @@
 ### Contents
 - [Figures](https://github.com/icooperstein/exomiser_optimization#figures)
 
+- [Create cohort-level YAML and execution files](https://github.com/icooperstein/exomiser_optimization/blob/main/manuscript/analyses/create_multiple_exomiser_run_scripts.py.py)
 
 ## Figures
 * jupyter notebooks used for figure generation in manuscript as well as PDFs of final figures
