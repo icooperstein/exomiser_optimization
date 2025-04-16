@@ -1,11 +1,12 @@
 # An optimized variant prioritization process for rare disease diagnostics: recommendations for Exomiser and Genomiser
 ### Contents
-- [Running Exomiser/Genomiser](https://github.com/icooperstein/exomiser_optimization#Installation-and-running-Exomiser-and-Genomiser)
-    - [Installation](https://github.com/icooperstein/exomiser_optimization#installation)
-    - [Filtering VCFs](https://github.com/icooperstein/exomiser_optimization#filtering-vcfs)
-    - [Run Exomiser](https://github.com/icooperstein/exomiser_optimization#run-exomiser)
-    - [Run Genomiser](https://github.com/icooperstein/exomiser_optimization#run-genomiser)
-- [Figures](https://github.com/icooperstein/exomiser_optimization#figures)
+- [Running Exomiser/Genomiser](#running-Exomiser-and-Genomiser)
+    - [Installation](#installation)
+    - [Filtering VCFs](#filtering-vcfs)
+    - [Run Exomiser](#run-exomiser)
+    - [Run Genomiser](#run-genomiser)
+- [Figures](#figures)
+
 
 - [Create cohort-level YAML and execution files](https://github.com/icooperstein/exomiser_optimization/blob/main/manuscript/analyses/create_multiple_exomiser_run_scripts.py.py)
 
@@ -13,7 +14,7 @@
 * jupyter notebooks used for figure generation in manuscript as well as PDFs of final figures
 
 
-## Running Exomiser/Genomiser
+## Running Exomiser and Genomiser
 ### Installation
 Installation instructions and instructions to run Exomiser and Genomiser can be found in their documentation: https://exomiser.readthedocs.io/en/latest/running.html
 ### Filtering VCFs
