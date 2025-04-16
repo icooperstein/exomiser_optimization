@@ -1,9 +1,9 @@
-# exomiser_optimization
+# An optimized variant prioritization process for rare disease diagnostics: recommendations for Exomiser and Genomiser
 
-**figures**
+**figures/**
 * jupyter notebooks used for figure generation in manuscript as well as PDFs of final figures
 
-**analyses**
+**analyses/**
 * analyses used in manuscript
 - [Create cohort-level YAML and execution files](https://github.com/icooperstein/exomiser_optimization/blob/main/manuscript/analyses/create_multiple_exomiser_run_scripts.py.py)
 
