@@ -30,14 +30,14 @@ Necessary files to run Exomiser as a slurm job:
 1. Proband-only or multisample VCF - provided by user
 2. Pedigree (for multisample VCF) - provided by user
 3. YAML file
-    - [Example YAML files for Exomiser](https://github.com/icooperstein/exomiser_optimization/blob/main/run_exomiser/yml_files) 
-4. [application.properties](https://github.com/icooperstein/exomiser_optimization/blob/main/run_exomiser/application.properties)
+    - [Example YAML files for Exomiser](run_exomiser/yml_files) 
+4. [application.properties](run_exomiser/application.properties)
 5. Execution scripts
-    - [run_exomiser.sh](https://github.com/icooperstein/exomiser_optimization/blob/main/run_exomiser/run_exomiser.sh)
-    - [submit_exomiser.sh](https://github.com/icooperstein/exomiser_optimization/blob/main/run_exomiser/submit_exomiser.sh)
+    - [run_exomiser.sh](run_exomiser/run_exomiser.sh)
+    - [submit_exomiser.sh](run_exomiser/submit_exomiser.sh)
 Linux bash command: ```sbatch submit_exomiser.sh ID run_type```
 Replace "ID" with your sample ID and "run_type" with naming convention you have named your YML files
-*[Create cohort-level YAML and execution files](https://github.com/icooperstein/exomiser_optimization/blob/main/manuscript/run_exomiser/create_multiple_exomiser_run_scripts.py)
+*[Create cohort-level YAML and execution files](analyses/create_multiple_exomiser_run_scripts.py)
 
 ### Run Genomiser
 It is not necessary to replicate our set-up for running Genomiser. \
@@ -45,11 +45,11 @@ Necessary files to run Exomiser as a slurm job:
 1. Proband-only or multisample VCF - provided by user
 2. Pedigree (for multisample VCF) - provided by user
 3. YAML file
-    - [Example YAML files for Genomiser](https://github.com/icooperstein/exomiser_optimization/blob/main/run_genomiser/yml_files) 
-4. [application.properties](https://github.com/icooperstein/exomiser_optimization/blob/main/un_genomiser/application.properties)
+    - [Example YAML files for Genomiser](run_genomiser/yml_files) 
+4. [application.properties](run_genomiser/application.properties)
 5. Execution scripts
-    - [run_genomiser.sh](https://github.com/icooperstein/exomiser_optimization/blob/main/run_genomiser/run_genomiser.sh)
-    - [submit_genomiser.sh](https://github.com/icooperstein/exomiser_optimization/blob/main/un_genomiser/submit_genomiser.sh)
+    - [run_genomiser.sh](run_genomiser/run_genomiser.sh)
+    - [submit_genomiser.sh](run_genomiser/submit_genomiser.sh)
 Linux bash command: ```sbatch submit_genomiser.sh ID run_type```
 Replace "ID" with your sample ID and "run_type" with naming convention you have named your YML files
 
