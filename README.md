@@ -1,7 +1,7 @@
 # An optimized variant prioritization process for rare disease diagnostics: recommendations for Exomiser and Genomiser
 ### Contents
-> manuscript/figures
->> jupyter notebooks used for figure generation in manuscript as well as PDFs of final figures
+- [manuscript/figures](https://github.com/icooperstein/exomiser_optimization/tree/main/manuscript/figures)
+    - jupyter notebooks used for figure generation in manuscript as well as PDFs of final figures
 
 
 ## Running Exomiser / Genomiser
