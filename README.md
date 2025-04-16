@@ -6,8 +6,6 @@
     - [Run Exomiser](#run-exomiser)
     - [Run Genomiser](#run-genomiser)
 - [Figures](#figures)
-
-
 - [Create cohort-level YAML and execution files](https://github.com/icooperstein/exomiser_optimization/blob/main/manuscript/analyses/create_multiple_exomiser_run_scripts.py.py)
 
 ## Figures
@@ -36,7 +34,6 @@ Necessary files to run Exomiser as a slurm job:
 2. Pedigree (for multisample VCF) - provided by user
 3. YAML file
     - [Example YAML files for Exomiser](https://github.com/icooperstein/exomiser_optimization/blob/main/run_exomiser/yml_files) 
-
 4. [application.properties](https://github.com/icooperstein/exomiser_optimization/blob/main/run_exomiser/application.properties)
 5. Execution scripts
     - [run_exomiser.sh](https://github.com/icooperstein/exomiser_optimization/blob/main/run_exomiser/run_exomiser.sh)
@@ -52,7 +49,6 @@ Necessary files to run Exomiser as a slurm job:
 2. Pedigree (for multisample VCF) - provided by user
 3. YAML file
     - [Example YAML files for Genomiser](https://github.com/icooperstein/exomiser_optimization/blob/main/run_genomiser/yml_files) 
-
 4. [application.properties](https://github.com/icooperstein/exomiser_optimization/blob/main/un_genomiser/application.properties)
 5. Execution scripts
     - [run_genomiser.sh](https://github.com/icooperstein/exomiser_optimization/blob/main/run_genomiser/run_genomiser.sh)
