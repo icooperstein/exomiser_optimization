@@ -5,13 +5,18 @@ BENCHMARKING STRATEGY: Variant-level success (#2)
 This is our primary success measure and is most frequently reported in the manuscript.
 The diagnostic variant, including the correct position and nucleotide change, is prioritized, even if the MOI is incorrect.
 ie: 
-chr1:123456 A>C
+chr1:123456 A>T
 MOI: AR
-exomiser form: 1-123456-A-C_AR
+exomiser form: 1-123456-A-T_AR
 
-exomiser result: 1-123456-A-C-AD
+exomiser result: 1-123456-A-T-AD
 
 This is a SUCCESS by this metric; despite the MOI being incorrect 
+
+Necessary columns in input table:
+1. ID (form patientID_gene)
+2. genomic_coordinates_hg38 (chr1:123456 A>T)
+3. MOI (AR, AD, XR, or XD)
 
 '''
 
@@ -24,7 +29,6 @@ print(len(variant_table), 'variants')
 exomiser_variants =[]
 for i, row in variant_table.iterrows():
     variant = row['genomic_coordinates_hg38']
-    narrative = row['narrative']
     moi = row['MOI']
     try:
         variant_exo = variant.replace('chr', '',).replace(':','-').replace(' ','-').replace('>','-') + '_' + str(moi)
@@ -60,7 +64,7 @@ for RUN_TYPE in set(RUN_TYPES):
         variant_noMOI = variant.split('_')[0]
 
         try:
-            results_file = pd.read_csv('/path/to/results/' + str(ID) +'/results/' + str(ID) + '_' + str(RUN_TYPE)+'.variants.tsv', sep='\t')
+            results_file = pd.read_csv('/path/to/Exomiser/directory/exomiser_results/' + str(ID) +'/results/' + str(ID) + '_' + str(RUN_TYPE)+'.variants.tsv', sep='\t')
         except:
             print('no results file found for', str(ID))
             failed.append(ID)
@@ -73,7 +77,6 @@ for RUN_TYPE in set(RUN_TYPES):
         exo_results.loc[:,'ID2'] = exo_results.loc[:,'ID'].map(parse_str) ##for no MOI
 
         if gene in list(results_file['GENE_SYMBOL']):
-            print('gene present')
             n+=1
             
             if variant_noMOI in list(exo_results['ID2']):
@@ -104,6 +107,8 @@ for RUN_TYPE in set(RUN_TYPES):
                     data['Variant_Level_noMOI_maxPathSource_' + str(RUN_TYPE)].append(max_path_source_noMOI)
 
             else:
+                print(variant_noMOI, list(exo_results['ID2']))
+
                 data['Variant_Level_noMOI_' + str(RUN_TYPE)].append('Variant_Not_Present_noMOI')
                 data['Variant_Level_noMOI_rank_' + str(RUN_TYPE)].append('N/A')
                 data['Variant_Level_noMOI_p_' + str(RUN_TYPE)].append('N/A')
@@ -129,5 +134,5 @@ for RUN_TYPE in set(RUN_TYPES):
 variant_table = pd.DataFrame(data)
 print(failed)
 
-
-variant_table.to_csv('/path/to/directory/input.tsv', sep='\t', index=None)
+##save results table (figure input)
+variant_table.to_csv('/path/to/directory/exomiser_results_table.tsv', sep='\t', index=None)
