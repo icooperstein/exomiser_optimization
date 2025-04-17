@@ -6,6 +6,7 @@
     - [Run Exomiser](#run-exomiser)
     - [Run Genomiser](#run-genomiser)
 - [Analyses](#analyses)
+    - [Prune HPO term lists][#prune-hpo-term-lists]
     - [Subset to proband-only VCF](#subset-to-proband-only-vcf)
     - [Benchmarking results tables](#benchmarking-results-tables)
     - [Complete table of Exomiser/Genomiser results](#complete-table-of-results)
@@ -58,6 +59,9 @@ Replace "ID" with your sample ID and "run_type" with naming convention you have 
 * jupyter notebooks used for figure generation in manuscript as well as PDFs of final figures
 
 ## Analyses
+### Prune HPO term lists
+HPO term lists were "pruned" by removing all perinatal and prenatal HPO terms from probands comprehensive HPO term lists. A complete list of removed terms can be found in manuscript's supplementary materials or [prune_term_lists.py](analyses/prune_term_lists.py)
+
 ### Subset to proband-only VCF
 
 ```
