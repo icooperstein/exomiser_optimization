@@ -11,6 +11,7 @@
     - [Benchmarking results tables](#benchmarking-results-tables)
     - [Complete table of Exomiser/Genomiser results](#complete-table-of-results)
     - [Filtering analysis](#filtering-analysis)
+    - [Remove frequently ranked genes](#remove-frequently-genes)
 - [Figures](#figures)
 ## Running Exomiser and Genomiser
 ### Installation
@@ -89,7 +90,7 @@ This outputs a table of every variant in the results files for a cohort of patie
 [GQ_VAF_analysis.py](analyses/GQ_VAF_analysis.py) \
 Analysis completed to process data for Figure 1: Evaluating VCF filtering criteria on 474 variants in combined WES and WGS cohorts.
 
-## Remove frequently genes
+### Remove frequently genes
 [remove_frequent_genes_rerank.py](analyses/remove_frequent_genes_rerank.py) \
 Remove frequently prioritized genes (p≤0.3 in top 30 candidates for ≥5% of cohort) followed by subsequent reranking of diagnostic benchmarking variants.
 Supplementary Figure 14: Removal of frequently ranked genes in WGS Exomiser cohort.
