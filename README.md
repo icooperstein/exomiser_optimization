@@ -58,9 +58,6 @@ Necessary files to run Exomiser as a slurm job:
 Linux bash command: ```sbatch submit_genomiser.sh ID run_type```
 Replace "ID" with your sample ID and "run_type" with naming convention you have named your YML files
 
-## Figures
-* jupyter notebooks used for figure generation in manuscript as well as PDFs of final figures
-
 ## Analyses
 ### Prune HPO term lists
 HPO term lists were "pruned" by removing all perinatal and prenatal HPO terms from probands comprehensive HPO term lists. A complete list of removed terms can be found in manuscript's supplementary materials or [prune_term_lists.py](analyses/prune_term_lists.py)
@@ -104,3 +101,13 @@ variables:
 ### Run time analysis
 Supplementary Figure 1: Comparison of Exomiser and Genomiser performance on coding variants. \
 [runtime.py](analyses/runtime.py)
+
+
+## Figures
+[Figure 1](figures/figure1.ipynb): Evaluating VCF filtering criteria on 474 variants in combined WES and WGS cohorts. \
+[Figure 2](figures/figure2.ipynb): Evaluation of phenotype prioritization algorithms in the WGS Exomiser cohort. \
+[Figure 3](figures/figure3.ipynb): Stepwise optimization process for Exomiser and Genomiser across three UDN cohorts. \
+[Figure 4](figures/figure4.ipynb): Evaluation of variant pathogenicity prediction score sources in the WGS Exomiser cohort. \
+[Figure 5](figures/figure5.ipynb): Frequently ranked genes in the WGS Exomiser cohort. \
+Figure 6: Parameter optimization shifts diagnostic variants into the top ten candidates in the WGS Exomiser cohort. \
+Figure 7: Recommended workflow for using Exomiser and Genomiser in rare disease diagnostics. (flow chart created in Adobe Illustrator) \
