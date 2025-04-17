@@ -94,9 +94,9 @@ Analysis completed to process data for Figure 1: Evaluating VCF filtering criter
 [remove_frequent_genes_rerank.py](analyses/remove_frequent_genes_rerank.py) \
 Remove frequently prioritized genes (p≤0.3 in top 30 candidates for ≥5% of cohort) followed by subsequent reranking of diagnostic benchmarking variants.
 Supplementary Figure 14: Removal of frequently ranked genes in WGS Exomiser cohort.
-Supplementary Figure 15: Frequently ranked genes in WES Exomiser cohort.
+Supplementary Figure 15: Frequently ranked genes in WES Exomiser cohort. \
 bash command: ```python remove_frequent_genes_rerank.py run_type WGS exomiser_results_table.tsv``` \
-variables: \
+variables: 
 1. run_type (ex: 'exomiser_default'; must match naming convention of your results files (eg run_type_sampleid.variants.tsv))
 2. cohort (can be WES or WGS depending on which list of genes you want removed)
 3. variants_Table (ex exomiser_results_table.tsv; created from [benchmarking results tables](#benchmarking-results-tables))
