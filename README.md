@@ -5,10 +5,10 @@
     - [Filtering VCFs](#filtering-vcfs)
     - [Run Exomiser](#run-exomiser)
     - [Run Genomiser](#run-genomiser)
-- [Figures](#figures)
 - [Analyses](#analyses)
-    - [Subset to proband-only VCF]
-
+    - [Subset to proband-only VCF](#subset-to-proband-only-vcf)
+    - [Benchmarking results tables](#benchmarking-results-tables)
+- [Figures](#figures)
 ## Running Exomiser and Genomiser
 ### Installation
 Installation instructions and instructions to run Exomiser and Genomiser can be found in their documentation: https://exomiser.readthedocs.io/en/latest/running.html
@@ -64,4 +64,10 @@ bcftools view -O u -o sample.singleton.vcf.gz -s "SAMPLE_ID" sample.filtered.vcf
 
 ```
 
-
+### Benchmarking results tables
+We defined three success criteria to evaluate Exomiser and Genomiser's ability to accurately prioritize diagnostic variants.
+1. [Gene-level success](analyses/gene_level_benchmarking_results_table.py): The diagnostic gene is present in the prioritized Exomiser/Genomiser output, regardless of whether the variant position(s) or nucleotide change(s) contributing to the gene’s score are correct. This is the most lenient criterion.
+2. [Variant-level success](variant_level_benchmarking_results_table.py): The diagnostic variant, including the correct position and nucleotide change, is prioritized, even if the mode of inheritance (MOI), such as autosomal dominant (AD) or autosomal recessive (AR), is incorrect. *This is our primary success measure and is most frequently reported in this manuscript.*
+3. [Variant-level success with correct MOI](variant_level_withMOI_benchmarking_results_table.py): The diagnostic variant meets criterion 2 and has the correct MOI, making this the most stringent criterion.
+For example, in compound heterozygous cases where one variant is not prioritized and the second is prioritized as an AD variant, this qualifies as a gene-level success (criterion 1), one success and one failure at the variant level (criterion 2), and two failures under variant-level success with correct MOI (criterion 3).
+The results of these scripts are the data inputs for all of the figures found in the manuscript.
