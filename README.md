@@ -92,7 +92,8 @@ Analysis completed to process data for Figure 1: Evaluating VCF filtering criter
 
 ### Remove frequently ranked genes
 Supplementary Figure 14: Removal of frequently ranked genes in WGS Exomiser cohort. \
-Supplementary Figure 15: Frequently ranked genes in WES Exomiser cohort. \[remove_frequent_genes_rerank.py](analyses/remove_frequent_genes_rerank.py) \
+Supplementary Figure 15: Frequently ranked genes in WES Exomiser cohort. \
+[remove_frequent_genes_rerank.py](analyses/remove_frequent_genes_rerank.py) \
 Remove frequently prioritized genes (p≤0.3 in top 30 candidates for ≥5% of cohort) followed by subsequent reranking of diagnostic benchmarking variants. \
 bash command: ```python remove_frequent_genes_rerank.py run_type WGS exomiser_results_table.tsv``` \
 variables: 
@@ -112,7 +113,7 @@ Supplementary Figure 1: Comparison of Exomiser and Genomiser performance on codi
 [Figure 4](figures/figure4.ipynb): Evaluation of variant pathogenicity prediction score sources in the WGS Exomiser cohort. \
 [Figure 5](figures/figure5.ipynb): Frequently ranked genes in the WGS Exomiser cohort. \
 Figure 6: Parameter optimization shifts diagnostic variants into the top ten candidates in the WGS Exomiser cohort. \
-Figure 7: Recommended workflow for using Exomiser and Genomiser in rare disease diagnostics. (flow chart created in Adobe Illustrator) \
+Figure 7: Recommended workflow for using Exomiser and Genomiser in rare disease diagnostics. (flow chart created in Adobe Illustrator) 
 
 ## Supplementary Figures
 Supplementary Figure 1: Comparison of Exomiser and Genomiser performance on coding variants. \
@@ -131,4 +132,4 @@ Supplementary Figure 12: Impact of family variant data and inheritance filters o
 Supplementary Figure 13: Impact of maximum p-value thresholds on length of candidate variant list and loss of diagnostic variants. \
 [Supplementary Figure 14](figures/supplementary_fig14.ipynb): Removal of frequently ranked genes in WGS Exomiser cohort. \
 Supplementary Figure 15: Frequently ranked genes in WES Exomiser cohort. \
-Supplementary Figure 16: Parameter optimization shifts diagnostic variants into top ten candidates in WGS Genomiser and WES Exomiser cohorts. \
+Supplementary Figure 16: Parameter optimization shifts diagnostic variants into top ten candidates in WGS Genomiser and WES Exomiser cohorts. 
