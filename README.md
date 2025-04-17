@@ -8,6 +8,7 @@
 - [Analyses](#analyses)
     - [Prune HPO term lists](#prune-hpo-term-lists)
     - [Subset to proband-only VCF](#subset-to-proband-only-vcf)
+    - [Cohort-level YAML and execution files](analyses/create_multiple_exomiser_run_scripts.py)
     - [Benchmarking results tables](#benchmarking-results-tables)
     - [Complete table of Exomiser/Genomiser results](#complete-table-of-results)
     - [Filtering analysis](#filtering-analysis)
@@ -44,7 +45,7 @@ Necessary files to run Exomiser as a slurm job:
     - [submit_exomiser.sh](run_exomiser/submit_exomiser.sh)
 Linux bash command: ```sbatch submit_exomiser.sh ID run_type```
 Replace "ID" with your sample ID and "run_type" with naming convention you have named your YML files
-*[Create cohort-level YAML and execution files](analyses/create_multiple_exomiser_run_scripts.py)
+* [Create cohort-level YAML and execution files](analyses/create_multiple_exomiser_run_scripts.py)
 
 ### Run Genomiser
 It is not necessary to replicate our set-up for running Genomiser. \
