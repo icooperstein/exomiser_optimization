@@ -14,6 +14,8 @@
     - [Remove frequently ranked genes](#remove-frequently-ranked-genes)
     - [Run time analysis](#run-time-analysis)
 - [Figures](#figures)
+- [Supplementary Figures](#supplementary-figures)
+
 ## Running Exomiser and Genomiser
 ### Installation
 Installation instructions and instructions to run Exomiser and Genomiser can be found in their documentation: https://exomiser.readthedocs.io/en/latest/running.html
@@ -111,3 +113,22 @@ Supplementary Figure 1: Comparison of Exomiser and Genomiser performance on codi
 [Figure 5](figures/figure5.ipynb): Frequently ranked genes in the WGS Exomiser cohort. \
 Figure 6: Parameter optimization shifts diagnostic variants into the top ten candidates in the WGS Exomiser cohort. \
 Figure 7: Recommended workflow for using Exomiser and Genomiser in rare disease diagnostics. (flow chart created in Adobe Illustrator) \
+
+## Supplementary Figures
+Supplementary Figure 1: Comparison of Exomiser and Genomiser performance on coding variants. \
+Supplementary Figure 2: Breakdown of three UDN cohorts used in benchmarking. \
+Supplementary Figure 3: Summary of combined WES/WGS cohorts. \
+Supplementary Figure 4: Genomiser performance using hiPHIVE with default versus human-only gene:phenotype associations. \
+[Supplementary Figure 5](figures/supplementary_fig5.ipynb): Evaluation of individual variant pathogenicity prediction score sources in WGS Exomiser cohort. \
+[Supplementary Figure 6](figures/supplementary_fig6.ipynb): WGS Exomiser diagnostic variants’ maximum pathogenicity score source broken down by variant class. \
+Supplementary Figure 7: Evaluation of variant pathogenicity prediction score sources in WES Exomiser cohort. \
+Supplementary Figure 8: Evaluation of variant pathogenicity prediction score sources in
+WGS Genomiser cohort. \
+Supplementary Figure 9: Exomiser performance on WGS Genomiser cohort. \
+Supplementary Figure 10: Impact of proband phenotype quality on Exomiser performance. \
+Supplementary Figure 11: Recovering diagnostic variants through proband-only reanalysis or manual pedigree correction. \
+Supplementary Figure 12: Impact of family variant data and inheritance filters on Exomiser performance. \
+Supplementary Figure 13: Impact of maximum p-value thresholds on length of candidate variant list and loss of diagnostic variants. \
+[Supplementary Figure 14](figures/supplementary_fig14.ipynb): Removal of frequently ranked genes in WGS Exomiser cohort. \
+Supplementary Figure 15: Frequently ranked genes in WES Exomiser cohort. \
+Supplementary Figure 16: Parameter optimization shifts diagnostic variants into top ten candidates in WGS Genomiser and WES Exomiser cohorts. \
