@@ -10,6 +10,7 @@
     - [Subset to proband-only VCF](#subset-to-proband-only-vcf)
     - [Benchmarking results tables](#benchmarking-results-tables)
     - [Complete table of Exomiser/Genomiser results](#complete-table-of-results)
+    - [Filtering analysis](#filtering-analysis)
 - [Figures](#figures)
 ## Running Exomiser and Genomiser
 ### Installation
@@ -82,3 +83,7 @@ The results of these scripts are the data inputs for all of the figures found in
 This outputs a table of every variant in the results files for a cohort of patients. 
 1. [Gene-Level](analyses/gene_level_complete_results_table.py): table of complete list of genes prioritized by Exomiser or Genomiser in the ".genes.tsv" results file for a cohort of patients.
 2. [Variant-Level](analyses/variant_level_complete_results_table.py): table of complete list of variants prioritized by Exomiser or Genomiser in the ".variants.tsv" results file for a cohort of patients.
+
+### Filtering analysis
+[GQ_VAF_analysis.py](analyses/GQ_VAF_analysis.py)
+Analysis completed to process data for Figure 1: Evaluating VCF filtering criteria on 474 variants in combined WES and WGS cohorts.
