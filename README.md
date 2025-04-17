@@ -11,7 +11,7 @@
     - [Benchmarking results tables](#benchmarking-results-tables)
     - [Complete table of Exomiser/Genomiser results](#complete-table-of-results)
     - [Filtering analysis](#filtering-analysis)
-    - [Remove frequently ranked genes](#remove-frequently-genes)
+    - [Remove frequently ranked genes](#remove-frequently-ranked-genes)
 - [Figures](#figures)
 ## Running Exomiser and Genomiser
 ### Installation
@@ -90,12 +90,12 @@ This outputs a table of every variant in the results files for a cohort of patie
 [GQ_VAF_analysis.py](analyses/GQ_VAF_analysis.py) \
 Analysis completed to process data for Figure 1: Evaluating VCF filtering criteria on 474 variants in combined WES and WGS cohorts.
 
-### Remove frequently genes
+### Remove frequently ranked genes
 [remove_frequent_genes_rerank.py](analyses/remove_frequent_genes_rerank.py) \
 Remove frequently prioritized genes (p≤0.3 in top 30 candidates for ≥5% of cohort) followed by subsequent reranking of diagnostic benchmarking variants.
 Supplementary Figure 14: Removal of frequently ranked genes in WGS Exomiser cohort.
 Supplementary Figure 15: Frequently ranked genes in WES Exomiser cohort.
-bash command: ```python remove_frequent_genes_rerank.py run_type WGS exomiser_results_table.tsv``` 
+bash command: ```python remove_frequent_genes_rerank.py run_type WGS exomiser_results_table.tsv``` \
 variables: \
 1. run_type (ex: 'exomiser_default'; must match naming convention of your results files (eg run_type_sampleid.variants.tsv))
 2. cohort (can be WES or WGS depending on which list of genes you want removed)
