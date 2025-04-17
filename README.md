@@ -76,7 +76,8 @@ We defined three success criteria to evaluate Exomiser and Genomiser's ability t
 2. [Variant-level success](variant_level_benchmarking_results_table.py): The diagnostic variant, including the correct position and nucleotide change, is prioritized, even if the mode of inheritance (MOI), such as autosomal dominant (AD) or autosomal recessive (AR), is incorrect. **This is our primary success measure and is most frequently reported in this manuscript.**
 3. [Variant-level success with correct MOI](variant_level_withMOI_benchmarking_results_table.py): The diagnostic variant meets criterion 2 and has the correct MOI, making this the most stringent criterion.
 For example, in compound heterozygous cases where one variant is not prioritized and the second is prioritized as an AD variant, this qualifies as a gene-level success (criterion 1), one success and one failure at the variant level (criterion 2), and two failures under variant-level success with correct MOI (criterion 3). \
-The results of these scripts are the data inputs for all of the figures found in the manuscript.
+\
+The results of these scripts are the data inputs for all of the figures found in the manuscript, except fig 1.
 
 
 ### Complete table of results
@@ -85,5 +86,17 @@ This outputs a table of every variant in the results files for a cohort of patie
 2. [Variant-Level](analyses/variant_level_complete_results_table.py): table of complete list of variants prioritized by Exomiser or Genomiser in the ".variants.tsv" results file for a cohort of patients.
 
 ### Filtering analysis
-[GQ_VAF_analysis.py](analyses/GQ_VAF_analysis.py)
+[GQ_VAF_analysis.py](analyses/GQ_VAF_analysis.py) \
 Analysis completed to process data for Figure 1: Evaluating VCF filtering criteria on 474 variants in combined WES and WGS cohorts.
+
+## Remove frequently genes
+[remove_frequent_genes_rerank.py](analyses/remove_frequent_genes_rerank.py) \
+Remove frequently prioritized genes (p≤0.3 in top 30 candidates for ≥5% of cohort) followed by subsequent reranking of diagnostic benchmarking variants.
+Supplementary Figure 14: Removal of frequently ranked genes in WGS Exomiser cohort.
+Supplementary Figure 15: Frequently ranked genes in WES Exomiser cohort.
+bash command: ```python remove_frequent_genes_rerank.py run_type WGS exomiser_results_table.tsv``` 
+variables: \
+1. run_type (ex: 'exomiser_default'; must match naming convention of your results files (eg run_type_sampleid.variants.tsv))
+2. cohort (can be WES or WGS depending on which list of genes you want removed)
+3. variants_Table (ex exomiser_results_table.tsv; created from [benchmarking results tables](#benchmarking-results-tables))
+
