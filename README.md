@@ -6,7 +6,7 @@
     - [Run Exomiser](#run-exomiser)
     - [Run Genomiser](#run-genomiser)
 - [Analyses](#analyses)
-    - [Prune HPO term lists][#prune-hpo-term-lists]
+    - [Prune HPO term lists](#prune-hpo-term-lists)
     - [Subset to proband-only VCF](#subset-to-proband-only-vcf)
     - [Benchmarking results tables](#benchmarking-results-tables)
     - [Complete table of Exomiser/Genomiser results](#complete-table-of-results)
