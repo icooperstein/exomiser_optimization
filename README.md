@@ -117,7 +117,7 @@ Supplementary Figure 1: Comparison of Exomiser and Genomiser performance on codi
 Figure 7: Recommended workflow for using Exomiser and Genomiser in rare disease diagnostics. (flow chart created in Adobe Illustrator) 
 
 ## Supplementary Figures
-Supplementary Figure 1: Comparison of Exomiser and Genomiser performance on coding variants. \
+[Supplementary Figure 1](figures/supplementary_fig1.ipynb): Comparison of Exomiser and Genomiser performance on coding variants. \
 Supplementary Figure 2: Breakdown of three UDN cohorts used in benchmarking. \
 Supplementary Figure 3: Summary of combined WES/WGS cohorts. \
 Supplementary Figure 4: Genomiser performance using hiPHIVE with default versus human-only gene:phenotype associations. \
