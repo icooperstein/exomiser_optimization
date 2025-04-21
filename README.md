@@ -113,7 +113,7 @@ Supplementary Figure 1: Comparison of Exomiser and Genomiser performance on codi
 [Figure 3](figures/figure3.ipynb): Stepwise optimization process for Exomiser and Genomiser across three UDN cohorts. \
 [Figure 4](figures/figure4.ipynb): Evaluation of variant pathogenicity prediction score sources in the WGS Exomiser cohort. \
 [Figure 5](figures/figure5.ipynb): Frequently ranked genes in the WGS Exomiser cohort. \
-Figure 6: Parameter optimization shifts diagnostic variants into the top ten candidates in the WGS Exomiser cohort. \
+[Figure 6](figures/figure6.ipynb): Parameter optimization shifts diagnostic variants into the top ten candidates in the WGS Exomiser cohort. \
 Figure 7: Recommended workflow for using Exomiser and Genomiser in rare disease diagnostics. (flow chart created in Adobe Illustrator) 
 
 ## Supplementary Figures
