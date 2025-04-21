@@ -100,7 +100,29 @@ def create_plot_gene(denom, source, compare, color_scheme, big_plot, miser='Exom
         # titleFontSize=15).configure_legend(labelLimit=0,labelFontSize=15, titleFontSize=15)#.configure_axis(grid=False)
     return plot
 
+order=['NONE', 'ALPHA_MISSENSE', 'MVP', 'REVEL', 'SPLICE_AI', 'CADD','MUTATION_TASTER', 'POLYPHEN', 'SIFT','REMM', 'Not_Prioritized']
+def create_score_plot(run_type, table, order):
+    base = alt.Chart(table, title=str(len(table))+' Variants from UDN Individuals(' + str(run_type)+')')
+    bars=base.mark_bar().encode(
+        y=alt.Y('variant_type:N', sort='-x', title=None).axis(offset=5, domainOpacity=0),
+        x=alt.X('count()', title='Number of Diagnostic Variants'), 
+        color=alt.Color('Variant_Level_noMOI_maxPathSource_' + str(run_type), sort=order,scale=alt.Scale(domain=order,scheme='tableau20')),
+        tooltip = ['count()','variant_type:N','Variant_Level_noMOI_maxPathSource_' + str(run_type),],
+    )
 
+    text = base.mark_text(
+        align='left',
+        baseline='middle',
+        dx=3,
+        color='black',
+        size=12
+    ).encode(
+        y=alt.Y('variant_type:N', sort='-x', title=None).axis(offset=5, domainOpacity=0),
+        x=alt.X('count()'), 
+        text='count():Q'
+    )
+    plot = alt.layer(bars, text).resolve_scale(color='independent').properties(height=150, width=300)
+    return plot
 
 ##DOT PLOT##
 def dot_df_pvals(source, compare):
