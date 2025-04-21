@@ -42,8 +42,8 @@ Necessary files to run Exomiser as a slurm job:
 4. [application.properties](run_exomiser/application.properties)
 5. Execution scripts
     - [run_exomiser.sh](run_exomiser/run_exomiser.sh)
-    - [submit_exomiser.sh](run_exomiser/submit_exomiser.sh)
-Linux bash command: ```sbatch submit_exomiser.sh ID run_type```
+    - [submit_exomiser.sh](run_exomiser/submit_exomiser.sh) \
+Linux bash command: ```sbatch submit_exomiser.sh ID run_type``` \
 Replace "ID" with your sample ID and "run_type" with naming convention you have named your YML files
 * [Create cohort-level YAML and execution files](analyses/create_multiple_exomiser_run_scripts.py)
 
@@ -57,8 +57,8 @@ Necessary files to run Exomiser as a slurm job:
 4. [application.properties](run_genomiser/application.properties)
 5. Execution scripts
     - [run_genomiser.sh](run_genomiser/run_genomiser.sh)
-    - [submit_genomiser.sh](run_genomiser/submit_genomiser.sh)
-Linux bash command: ```sbatch submit_genomiser.sh ID run_type```
+    - [submit_genomiser.sh](run_genomiser/submit_genomiser.sh) \
+Linux bash command: ```sbatch submit_genomiser.sh ID run_type``` \
 Replace "ID" with your sample ID and "run_type" with naming convention you have named your YML files
 
 ## Analyses
