@@ -124,7 +124,7 @@ Figure 7: Recommended workflow for using Exomiser and Genomiser in rare disease 
 [Supplementary Figure 5](figures/supplementary_fig5.ipynb): Evaluation of individual variant pathogenicity prediction score sources in WGS Exomiser cohort. \
 [Supplementary Figure 6](figures/supplementary_fig6.ipynb): WGS Exomiser diagnostic variants’ maximum pathogenicity score source broken down by variant class. \
 [Supplementary Figure 7](figures/supplementary_fig7.ipynb): Evaluation of variant pathogenicity prediction score sources in WES Exomiser cohort. \
-Supplementary Figure 8: Evaluation of variant pathogenicity prediction score sources in
+[Supplementary Figure 8(figures/supplementary_fig8.ipynb)]: Evaluation of variant pathogenicity prediction score sources in
 WGS Genomiser cohort. \
 Supplementary Figure 9: Exomiser performance on WGS Genomiser cohort. \
 Supplementary Figure 10: Impact of proband phenotype quality on Exomiser performance. \
