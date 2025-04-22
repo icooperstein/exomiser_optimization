@@ -130,7 +130,7 @@ WGS Genomiser cohort. \
 [Supplementary Figure 10](figures/supplementary_fig10.ipynb): Impact of proband phenotype quality on Exomiser performance. \
 [Supplementary Figure 11](figures/supplementary_fig11.ipynb): Recovering diagnostic variants through proband-only reanalysis or manual pedigree correction. \
 [Supplementary Figure 12](figures/supplementary_fig12.ipynb): Impact of family variant data and inheritance filters on Exomiser performance. \
-Supplementary Figure 13: Impact of maximum p-value thresholds on length of candidate variant list and loss of diagnostic variants. \
+[Supplementary Figure 13](figures/supplementary_fig13.ipynb): Impact of maximum p-value thresholds on length of candidate variant list and loss of diagnostic variants. \
 [Supplementary Figure 14](figures/supplementary_fig14.ipynb): Removal of frequently ranked genes in WGS Exomiser cohort. \
 Supplementary Figure 15: Frequently ranked genes in WES Exomiser cohort. \
 Supplementary Figure 16: Parameter optimization shifts diagnostic variants into top ten candidates in WGS Genomiser and WES Exomiser cohorts. 
