@@ -132,5 +132,5 @@ WGS Genomiser cohort. \
 [Supplementary Figure 12](figures/supplementary_fig12.ipynb): Impact of family variant data and inheritance filters on Exomiser performance. \
 [Supplementary Figure 13](figures/supplementary_fig13.ipynb): Impact of maximum p-value thresholds on length of candidate variant list and loss of diagnostic variants. \
 [Supplementary Figure 14](figures/supplementary_fig14.ipynb): Removal of frequently ranked genes in WGS Exomiser cohort. \
-Supplementary Figure 15: Frequently ranked genes in WES Exomiser cohort. \
+[Supplementary Figure 15](figures/supplementary_fig15.ipynb): Frequently ranked genes in WES Exomiser cohort. \
 Supplementary Figure 16: Parameter optimization shifts diagnostic variants into top ten candidates in WGS Genomiser and WES Exomiser cohorts. 
