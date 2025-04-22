@@ -128,7 +128,7 @@ Figure 7: Recommended workflow for using Exomiser and Genomiser in rare disease 
 WGS Genomiser cohort. \
 [Supplementary Figure 9](figures/supplementary_fig9.ipynb): Exomiser performance on WGS Genomiser cohort. \
 [Supplementary Figure 10](figures/supplementary_fig10.ipynb): Impact of proband phenotype quality on Exomiser performance. \
-Supplementary Figure 11: Recovering diagnostic variants through proband-only reanalysis or manual pedigree correction. \
+[Supplementary Figure 11](figures/supplementary_fig11.ipynb): Recovering diagnostic variants through proband-only reanalysis or manual pedigree correction. \
 [Supplementary Figure 12](figures/supplementary_fig12.ipynb): Impact of family variant data and inheritance filters on Exomiser performance. \
 Supplementary Figure 13: Impact of maximum p-value thresholds on length of candidate variant list and loss of diagnostic variants. \
 [Supplementary Figure 14](figures/supplementary_fig14.ipynb): Removal of frequently ranked genes in WGS Exomiser cohort. \
