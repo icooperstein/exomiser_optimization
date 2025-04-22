@@ -29,9 +29,7 @@ def create_plot(denom, source, compare, color_scheme, big_plot,domain, miser='Ex
             y=alt.Y('Percent_Variants', title='Percent of Causal Variants within ' +str(miser)+' Rank', scale=alt.Scale(domain=[0,100])),
             color=alt.Color('Run_Type:N',sort=compare,scale=alt.Scale(scheme=color_scheme, domain=domain), legend=alt.Legend(orient='top')),
             tooltip=['Rank', 'Percent_Variants', 'Run_Type']
-        ).properties(
-            width=600,
-            height=500)
+        )
     
     
     zoom_source = source.loc[source['Rank'] <=30]
@@ -41,12 +39,11 @@ def create_plot(denom, source, compare, color_scheme, big_plot,domain, miser='Ex
         y=alt.Y('Percent_Variants', title='Percent of Causal Variants within '+str(miser)+' Rank', scale=alt.Scale(domain=[0,100])),
         color=alt.Color('Run_Type:N', sort=compare, scale=alt.Scale(scheme=color_scheme, domain=domain)),
         tooltip=['Rank', 'Percent_Variants', 'Run_Type']
-    ).properties(
-        width=600,
-        height=500)
+    )
     if not big_plot:
         plot = zoomChart
     else:
+        print('concatinating charts')
         plot=alt.hconcat(bigChart, zoomChart)#.configure_legend(labelLimit=0).configure_axis(
         # labelFontSize=15,
         # titleFontSize=15).configure_legend(labelLimit=0,labelFontSize=15, titleFontSize=15)#.configure_axis(grid=False)
