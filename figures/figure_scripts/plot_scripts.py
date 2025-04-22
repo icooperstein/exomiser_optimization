@@ -69,7 +69,8 @@ def create_df_gene(highest_rank, compare, successTable):
     return df, denom
 
 
-def create_plot_gene(denom, source, compare, color_scheme, big_plot, miser='Exomiser'):
+def create_plot_gene(denom, source, compare, color_scheme, big_plot, domain,miser='Exomiser'):
+
     title=str(denom) +'Diagnostic Genes (Gene Level)'
     if big_plot:
         bigChart = alt.Chart(source, title=title).mark_line().encode(
@@ -87,11 +88,14 @@ def create_plot_gene(denom, source, compare, color_scheme, big_plot, miser='Exom
     zoomChart = alt.Chart(zoom_source, title=title).mark_line(point=alt.OverlayMarkDef(size=50)).encode(
         x=alt.X('Rank', title=str(miser)+' Rank of Causal Gene'),
         y=alt.Y('Percent_Variants', title='Percent of Causal Genes within ' +str(miser)+ ' Rank', scale=alt.Scale(domain=[0,100])),
-        color=alt.Color('Run_Type:N', sort=compare, scale=alt.Scale(scheme=color_scheme)),
+        color=alt.Color('Run_Type:N', sort=compare, scale=alt.Scale(scheme=color_scheme, domain=domain)),
         tooltip=['Rank', 'Percent_Variants', 'Run_Type']
     ).properties(
         width=600,
         height=500)
+    
+    
+
     if not big_plot:
         plot = zoomChart
     else:
