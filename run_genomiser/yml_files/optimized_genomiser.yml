@@ -3,6 +3,7 @@ analysis:
    vcf: ## /path/to/vcf 
   ped: ## /path/to/pedigree/file
   proband: ## proband ID (to match proband sample ID in pedigree file)
+  preset: GENOME
   hpoIds: ['Term1', 'Term2'] ## list of HPO IDs (ex HP:0000118)
   
   inheritanceModes: {
