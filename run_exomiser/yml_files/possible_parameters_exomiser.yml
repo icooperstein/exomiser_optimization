@@ -18,12 +18,8 @@ analysis:
   analysisMode: PASS_ONLY
 
   frequencySources: [
-    THOUSAND_GENOMES,
-    TOPMED,
-    UK10K,
-    ESP_AA, 
-    ESP_EA,
-    ESP_ALL,   
+    
+    UK10K,  
     GNOMAD_E_AFR,
     GNOMAD_E_AMR,
     GNOMAD_E_EAS,
@@ -34,6 +30,10 @@ analysis:
     GNOMAD_G_EAS,
     GNOMAD_G_NFE,
     GNOMAD_G_SAS
+
+    ## additional options
+    ## included in gnomAD v4: THOUSAND_GENOMES, TOPMED, ESP_AA, ESP_EA, ESP_ALL, 
+    ## founder/smaller populations (not recommended): GNOMAD_G_ASJ,GNOMAD_G_FIN,GNOMAD_G_MID,GNOMAD_G_OTH,GNOMAD_E_ASJ,GNOMAD_E_FIN,GNOMAD_E_MID,GNOMAD_E_OTH
   ]
 
   pathogenicitySources: [
