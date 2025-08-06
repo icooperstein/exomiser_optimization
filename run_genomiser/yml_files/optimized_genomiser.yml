@@ -19,12 +19,7 @@ analysis:
   analysisMode: PASS_ONLY
 
   frequencySources: [
-    THOUSAND_GENOMES,
-    TOPMED,
     UK10K,
-    ESP_AA, 
-    ESP_EA, 
-    ESP_ALL,
     GNOMAD_E_AFR,
     GNOMAD_E_AMR,
     GNOMAD_E_EAS,
